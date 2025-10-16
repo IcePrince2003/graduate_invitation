@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang chủ</title>
+  <!-- Tự động chuyển hướng sau 0 giây -->
+  <meta http-equiv="refresh" content="7; url=information.html">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" href="data:,">
+  <style>
+    p{
+      margin: 0px;
+      font-size: 24px;
+    }
+    p#invitation{
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="text-center py-3 my-3">Xin chào</h1>
+  <p id="invitation" class="text-center">Đây là thư mời đến dự lễ trao bằng tốt nghiệp của em/mình. <br>Mọi người vui lòng cho mình xin thông tin để em/mình có thể xác nhận sự tham gia của mọi người nhé. Cám ơn mọi người rất nhiều.</p>
+  <p id="redirect" class="text-center"></p>
+  <p class="text-center">Nếu bạn không được tự động chuyển hướng, hãy bấm <a href="information.html">vào đây</a>.</p>
+  <script>
+    let sec = 7;
+    const redirect = document.getElementById("redirect");
+    const timeout = setInterval(()=>{
+      sec--;
+      redirect.innerText = "Trang sẽ chuyển hướng sau " + sec + " giây";
+      if(sec<0) clearInterval(timeout);
+    }, 1000)
+  </script>
+</body>
+</html>
