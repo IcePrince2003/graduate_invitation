@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="invitation.css">
+    <link rel="stylesheet" href="responsive_invitation.css">
+    <title>Thư mời</title>
+</head>
+<body>
+    <div class="mx-auto invitation-paper">
+        <div class="mx-auto">
+            <h1>Thư mời</h1>
+            <p>Trân trọng <span id="dear"></span> mời </span></p>
+            <p id="customer_name" class="text-center"></p>
+            <p>Tới dự lễ tốt nghiệp của <span class="me"></span></p>
+            <div id="event_information">
+                <p><b>Thời gian:</b> <br> 08 giờ 00 phút <br>ngày 24 tháng 1 năm 2026</p>
+                <p><b>Địa điểm:</b> <br> Hội trường nhà A8 <br> trường ĐH Hàng Hải Việt Nam</p>
+
+                <p><b>Thời gian:</b> <br> ... giờ ... phút <br>ngày 24 tháng 1 năm 2026</p>
+                <p><b>Địa điểm:</b> <br> Hội trường A8 <br> trường ĐH Hàng Hải Việt Nam</p>
+                <p><b>Mọi chi tiết xin liên hệ:</b> <br>
+                    <a href="https://www.facebook.com/dokien.hoangtucodon/" target="_blank">
+                        <i class="fa-brands fa-square-facebook link"></i>
+                    </a>
+                    <a href="https://zalo.me/0398075240" target="_blank">
+                        <iconify-icon icon="simple-icons:zalo" class="link"></iconify-icon>
+                    </a>
+                    <a href="tel:0398075240">
+                        <i class="fa-solid fa-phone link"></i>
+                    </a>
+                </p>
+            </div>
+            <p id="close">Trân trọng <br id="br_close"> Đỗ Trung Kiên</p>
+            <center><hr style="width: 75%"></center>
+            <div style="margin-bottom: 10px;">
+                <p class="text-center" style="padding: 0px; margin: 0px;">Vui lòng xác nhận tham gia ở dưới đây</ơ>
+                <center>
+                    <button class="btn accept" data-bs-toggle="modal" data-bs-target="#acceptModal"> Có chứ, tất nhiên phải đến rồi</button>
+                    <button class="btn deny" data-bs-toggle="modal" data-bs-target="#denyModal">Tiếc ghê, không đến được rồi</button>
+                </center>
+            </div>            
+        </div>
+    </div>
+    <div class="modal fade" id="acceptModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel">Xác nhận tham gia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+            </div>
+            <div class="modal-body">
+                <p>Thật chứ? Vậy cho <span class="me"></span> xin số điện thoại để tiện liên lạc hôm ấy nhé</p>
+                <input type="text" name="phone" id="phone" class="form-control">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn accept" id="btn_accept">Chắc chắn rồi, yên tâm.</button>
+                <button type="button" class="btn deny" data-bs-dismiss="modal">Từ từ...để suy nghĩ lại</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="denyModal" tabindex="-1" aria-labelledby="confirmModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel2">Xác nhận từ chối</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+            </div>
+            <div class="modal-body">
+                Thật sao? Đến đi mà.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn accept" id="btn_deny">Sorry, không đến được thật.</button>
+                <button type="button" class="btn deny" data-bs-dismiss="modal">Từ từ...để suy nghĩ lại</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-body" id="text_result"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn accept" id="btn_confirm" data-bs-dismiss="modal">OK</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="invitation.js"></script>    
+</body>
+</html>

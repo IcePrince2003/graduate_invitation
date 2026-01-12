@@ -1,0 +1,37 @@
+#form
+{
+    width: 80%;
+}
+div.information
+{
+    margin-bottom: 10px;
+}
+body
+{
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 1px;
+    background-color: #002B5B;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+#paper_information
+{
+    background-color: rgba(255, 255, 255, 0.868); height: 70%; border-radius: 20px; box-shadow: 5px 5px 5px #000000;
+}
+input#name, input#yearOfBirth, select#gender{
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #002B5B;
+}
+@media (min-width: 1025px)
+{
+    #paper_information{
+        width: 50%;
+    }
+}
+@media (max-width: 1024px) {
+    #paper_information{
+        width: 80%; 
+    }
+}

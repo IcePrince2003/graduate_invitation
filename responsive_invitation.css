@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Hello Honey";
+    src: url("./font/DFVN%20Hello%20Honey.otf");
+}
+@font-face {
+    font-family: "Farsan";
+    src: url("./font/FARSAN-REGULAR.TTF");
+}
+@media (max-width:1024px){
+    body
+    {
+        background-color: #002B5B; display: flex; align-items: center;
+        width: 100dvw;
+        height: 100dvh;
+        padding: 0;
+        margin: 0;
+        font-family: Farsan;
+        font-size: 20px;
+        color: #002B5B; 
+    }
+    .invitation-paper
+    {
+        width:90%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 10px 10px 10px black;
+    }
+
+    .invitation-paper > div> h1
+    {
+        text-align: center; 
+        font-family: "Hello Honey"; 
+        font-size: 90px;
+    }
+    .invitation-paper > div
+    {
+        width: 90%;
+        height: 90%;
+    }
+    p
+    {
+        padding: 0px;
+        margin: 0px;
+        text-align: justify;
+    }
+    .invitation-paper > div > p
+    {
+        margin-bottom: 2px;
+        color: #002B5B;
+    }
+    p#customer_name
+    {
+        border-bottom: 3px dotted black;
+        font-weight: bold;
+    }
+    br{
+        display: none;
+    }
+    br#br_close{
+        display: inline;
+    }
+    button.btn
+    {
+        font-size: 20px;
+        margin-bottom: 5px;
+
+    }
+    button.btn:active
+    {
+        scale: 0.97;
+    }
+    .accept{
+        background-color: #002B5B;
+        color: #d8e8fb;   
+    }
+    .accept:hover
+    {
+        background-color: #002B5B;
+        color: #d8e8fb; 
+    }
+    .accept:active
+    {
+        background-color: #001b3a;
+    }
+    .deny
+    {
+        background-color: #d8e8fb;
+        color: #002B5B;
+        border: 1px solid #002B5B;
+    }
+    .deny:active
+    {
+        background-color: #b4ceed;
+    }
+    #close
+    {
+        text-align: right; font-size: 20px; margin: 5px 15px; line-height: 22px;
+    }
+    .link
+    {
+        color: #002B5B;
+        font-size: 20px;
+    }
+    a
+    {
+        width: 30px; height: 25px; line-height: 0px; display: inline-block;
+    }
+}
